@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4515CC3D29277A8A00F93575 /* BackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515CC3C29277A8A00F93575 /* BackView.swift */; };
 		45A38E082926507500792AC8 /* AmericanoChallengeNC1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A38E072926507500792AC8 /* AmericanoChallengeNC1App.swift */; };
 		45A38E0A2926507500792AC8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A38E092926507500792AC8 /* ContentView.swift */; };
 		45A38E0C2926507600792AC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45A38E0B2926507600792AC8 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4515CC3C29277A8A00F93575 /* BackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackView.swift; sourceTree = "<group>"; };
 		45A38E042926507500792AC8 /* AmericanoChallengeNC1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmericanoChallengeNC1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45A38E072926507500792AC8 /* AmericanoChallengeNC1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmericanoChallengeNC1App.swift; sourceTree = "<group>"; };
 		45A38E092926507500792AC8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				45A38E072926507500792AC8 /* AmericanoChallengeNC1App.swift */,
 				45A38E092926507500792AC8 /* ContentView.swift */,
+				4515CC3C29277A8A00F93575 /* BackView.swift */,
 				45A38E0B2926507600792AC8 /* Assets.xcassets */,
 				45A38E0D2926507600792AC8 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4515CC3D29277A8A00F93575 /* BackView.swift in Sources */,
 				45A38E0A2926507500792AC8 /* ContentView.swift in Sources */,
 				45A38E082926507500792AC8 /* AmericanoChallengeNC1App.swift in Sources */,
 			);
