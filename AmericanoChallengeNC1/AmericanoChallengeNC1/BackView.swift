@@ -17,7 +17,7 @@ struct BackView: View {
             VStack{
                 NavigationLink(destination: ContentView()) {
                     Image(systemName: "person.circle")
-                        .foregroundColor(.black)
+                        //.foregroundColor(.black)
                         .font(.title)
                     
                 }
