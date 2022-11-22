@@ -11,122 +11,175 @@ import UIKit
 struct ContentView: View {
     var body: some View {
         
-        ScrollView {
+        ZStack {
+            LinearGradient(colors: [Color("BlueColor"), Color("BlueColor1")] , startPoint: .bottom, endPoint: .top)
+           //(Color("BlueColor"))
+                .ignoresSafeArea()
             
-            VStack{
-                Spacer()
-                    .frame(height: 30)
-                ZStack{
-                    RoundedRectangle(cornerRadius: 20)
-                        .frame(width: 345, height: 400)
-                        .foregroundColor(Color("BlueColor"))
-                    
-                    VStack(alignment: .leading){
-                        
-                        Text("Edit")
-                            .font(.system(size: 20))
-                            .frame(width: 320, alignment: .trailing)
-                            .foregroundColor(Color("YellowColor"))
-                        
-                        Spacer()
-                         .frame(height: 15)
-                     
-                        HStack{
-                            Image(systemName: "person.fill")
-                            Text("Passenger")
-                            //.font(.title)
-                                .frame(width: 200, alignment: .leading)
-                                .foregroundColor(Color("GreyColor"))
-                                .font(.system(size: 20))
-                        }
-                        
-                            Text("Mariavittoria La Barbera")
-                            //.font(.title)
-                                .multilineTextAlignment(.leading)
-                            //.frame(width: 400)
-                                .foregroundColor(Color("BlackColor"))
-                                .font(.system(size: 25))
-                        
-                        
-                        
-                        HStack{
-                            Image(systemName: "calendar")
-                            Text("Birthday")
-                            //.font(.title)
-                                .frame(width: 200, alignment: .leading)
-                                .foregroundColor(.yellow)
-                                .font(.system(size: 20))
-                        }
-                        
-                        Text("15/11/2000")
-                        //.font(.title)
-                            .multilineTextAlignment(.leading)
-                        //.frame(width: 400)
-                            .foregroundColor(Color("BlackColor"))
-                            .font(.system(size: 25))
-                        
-                        HStack{
-                            Image(systemName: "phone.fill")
-                            Text("Phone number")
-                            //.font(.title)
-                                .frame(width: 200, alignment: .leading)
-                                .foregroundColor(.yellow)
-                                .font(.system(size: 20))
-                        }
-                        Text("+39 3314135253")
-                        //.font(.title)
-                            .multilineTextAlignment(.leading)
-                        //.frame(width: 400)
-                            .foregroundColor(Color("BlackColor"))
-                            .font(.system(size: 25))
-                       
-                        HStack{
-                            Image(systemName: "envelope.fill")
-                            Text("Contact")
-                            //.font(.title)
-                                .frame(width: 200, alignment: .leading)
-                                .foregroundColor(.yellow)
-                                .font(.system(size: 20))
-                        }
+            VStack() {
+                
+                VStack{
+                    Spacer()
+                        .frame(height: 30)
+                    ZStack(alignment: .top){
+                        RoundedRectangle(cornerRadius: 10)
+                            //.stroke(Color("YellowColor"), lineWidth: 1.5)
+                            .frame(width: 355, height: 310)
+                            .foregroundColor(Color("WhiteColor"))
+                            .shadow( color: .black, radius: 5, x:4, y:4)
                             
-                        Text("vitty.labarbera@ciao-idk")
-                        //.font(.title)
-                            .multilineTextAlignment(.leading)
-                        //.frame(width: 400)
-                            .foregroundColor(Color("BlackColor"))
-                            .font(.system(size: 25))
                         
-                        //Spacer()
-                            //.frame(height: 10)
-                        
+                        VStack(alignment: .leading){
+                            
+                            Spacer()
+                                .frame(height: 15)
+                            Text("Edit")
+                                .font(.title2)
+                                .frame(width: 320, alignment: .trailing)
+                                .foregroundColor(Color("YellowColor"))
+                            
+                            HStack{
+                                Image(systemName: "person.circle.fill")
+                                    .foregroundColor(Color("YellowColor"))
+                                    .font(.system(size: 50))
+                                Text("Your Name")
+                                //.font(.title)
+                                    .frame(width: 200, alignment: .leading)
+                                    .foregroundColor(Color("BlackColor"))
+                                    .font(.system(size: 30))
+                            }
+                            Spacer()
+                                .frame(height: 30)
+                            
+                            VStack{
+                                //Image(systemName: "airplane")
+                                Text("Flights")
+                                //.font(.title)
+                                    .frame(width: 200, alignment: .leading)
+                                    .foregroundColor(Color("BlackColor"))
+                                    .font(.system(size: 20))
+                                
+                                HStack {
+                                    Image(systemName: "airplane")
+                                        .foregroundColor(Color("YellowColor"))
+                                    Text("0")
+                                        .frame(width: 170, alignment: .leading)
+                                        .foregroundColor(Color("BlackColor"))
+                                        .font(.system(size: 30))
+                                }
+                            }
+                            
+                            Spacer()
+                                .frame(height: 15)
+                            
+                            HStack(alignment: .center){
+                                VStack(alignment: .leading){
+                                    Text("Countries")
+                                    //.font(.title)
+                                        .frame(width: 200, alignment: .leading)
+                                        .foregroundColor(Color("BlackColor"))
+                                        .font(.system(size: 20))
+                                    
+                                    HStack{
+                                        Image(systemName: "airplane")
+                                            .foregroundColor(Color("YellowColor"))
+                                            .frame(width: 10, alignment: .leading)
+                                        Text("20")
+                                            .frame(width: 60, alignment: .center)
+                                            .foregroundColor(Color("BlackColor"))
+                                            .font(.system(size: 30))
+                                    }
+                                    
+                                }
+                                VStack{
+                                    Text("Airports")
+                                    //.font(.title)
+                                        .frame(width: 100, alignment: .leading)
+                                        .foregroundColor(Color("BlackColor"))
+                                        .font(.system(size: 20))
+                                    
+                                    HStack{
+                                        
+                                        Text("30")
+                                            .frame(width: 100, alignment: .leading)
+                                            .foregroundColor(Color("BlackColor"))
+                                            .font(.system(size: 30))
+                                    }
+                                }
+                            }
+                            //.frame()
+                            
+                        }
                         
                     }
                     
                 }
                 
+                Spacer()
+                    .frame(height:20)
+                
+                HStack{
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 20)
+                            .frame(width: 177.5, height: 110)
+                            .foregroundColor(Color("WhiteColor"))
+                            .shadow( color: .black, radius: 5, x:2, y:2)
+                        
+                        VStack(alignment: .leading){
+                            Image(systemName: "person.3.sequence.fill")
+                                .foregroundColor(Color("YellowColor"))
+                            Spacer()
+                                .frame(height: 11)
+                            Text("Travel Companions")
+                        }
+                        
+                        
+                    }
+                    
+                    ZStack(alignment: .leading){
+                        RoundedRectangle(cornerRadius: 20)
+                            .frame(width: 177.5, height: 110)
+                            .foregroundColor(Color("WhiteColor"))
+                            .shadow( color: .black, radius: 5, x:2, y:2)
+                        
+                        VStack(alignment: .leading){
+                            Image(systemName: "wallet.pass.fill")
+                                .foregroundColor(Color("YellowColor"))
+                            Spacer()
+                                .frame(height: 9)
+                            Text("Your wallet")
+                        }
+                        .frame(width: 120)
+                    }
+                }
+                
+                Spacer()
+                    .frame(height:15)
+                
+                ZStack(alignment: .leading){
+                    RoundedRectangle(cornerRadius: 20)
+                        .frame(width: 355, height: 110)
+                        .foregroundColor(Color("WhiteColor"))
+                        .shadow( color: .black, radius: 5, x:2, y:2)
+                    
+                    VStack(alignment: .leading){
+                        Image(systemName: "person.text.rectangle.fill")
+                            .foregroundColor(Color("YellowColor"))
+                            .font(.title)
+                        Spacer()
+                            .frame(height: 9)
+                        Text("Travel Documents")
+                            .font(.title)
+                    }
+                    .frame(width: 300, alignment: .center)
+                }
+               
+               Spacer()
+                    .frame(height: 140)
             }
-            
-            Spacer()
-                .frame(height:15)
-            
-            
-            RoundedRectangle(cornerRadius: 20)
-                .frame(width: 350, height: 110)
-                .foregroundColor(Color("BlueColor"))
-            
-            RoundedRectangle(cornerRadius: 20)
-                .frame(width: 350, height: 110)
-                .foregroundColor(Color("BlueColor"))
-            
-            RoundedRectangle(cornerRadius: 20)
-                .frame(width: 350, height: 110)
-                .foregroundColor(Color("BlueColor"))
-            
-            
-            
+            .navigationTitle("Personal Information")
+            .fontWeight(.bold)
         }
-        .navigationTitle("Personal Information")
-        .fontWeight(.bold)
     }
 }
 
