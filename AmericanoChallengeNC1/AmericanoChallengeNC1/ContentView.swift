@@ -32,15 +32,18 @@ struct ContentView: View {
                             .shadow( color: .black, radius: 5, x:4, y:4)
                             .clipShape(TicketShape())
                         
-                        VStack(alignment: .leading){
+                        VStack(alignment: .center){
                             
                             Spacer()
                                 .frame(height: 15)
-                            Text("Edit")
-                                .font(.title2)
-                                .frame(width: 320, alignment: .trailing)
-                                .foregroundColor(Color("YellowColor"))
                             
+                            Button( action:{}, label: {
+                                Text("Edit")
+                                    .font(.title2)
+                                    .frame(width: 320, alignment: .trailing)
+                                    .foregroundColor(Color("YellowColor"))
+                            })
+                                
                             HStack{
                                 Image(systemName: "person.circle.fill")
                                     .foregroundColor(Color("YellowColor"))
@@ -65,8 +68,8 @@ struct ContentView: View {
                            Spacer()
                                 .frame(height: 0)
                             
-                            
-                            ZStack {
+                           
+                                ZStack {
                                 RoundedRectangle(cornerRadius: 10)
                                 //.stroke(Color("YellowColor"), lineWidth: 1.5)
                                     .frame(width: 355, height: 150)
@@ -106,8 +109,9 @@ struct ContentView: View {
                                                 .font(.system(size: 20))
                                             
                                             HStack{
-                                                Image(systemName: "airplane")
+                                                Image(systemName: "globe.europe.africa")
                                                     .foregroundColor(Color("YellowColor"))
+                                                    .font(.system(size: 20))
                                                     .frame(width: 10, alignment: .leading)
                                                 Text("20")
                                                     .frame(width: 60, alignment: .center)
@@ -124,9 +128,10 @@ struct ContentView: View {
                                                 .font(.system(size: 20))
                                             
                                             HStack{
-                                                
+                                                Image(systemName: "wallet.pass.fill")
+                                                    .foregroundColor(Color("YellowColor"))
                                                 Text("30")
-                                                    .frame(width: 100, alignment: .leading)
+                                                    .frame(width: 60, alignment: .leading)
                                                     .foregroundColor(Color("BlackColor"))
                                                     .font(.system(size: 30))
                                             }
@@ -150,60 +155,69 @@ struct ContentView: View {
                     .frame(height:20)
                 
                 HStack{
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 20)
-                            .frame(width: 177.5, height: 110)
-                            .foregroundColor(Color("WhiteColor"))
-                            .shadow( color: .black, radius: 5, x:2, y:2)
-                        
-                        VStack(alignment: .leading){
-                            Image(systemName: "person.3.sequence.fill")
-                                .foregroundColor(Color("YellowColor"))
-                            Spacer()
-                                .frame(height: 11)
-                            Text("Travel Companions")
+                    Button( action:{}, label: {
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 20)
+                                .frame(width: 177.5, height: 110)
+                                .foregroundColor(Color("WhiteColor"))
+                                .shadow( color: .black, radius: 5, x:2, y:2)
+                            
+                            VStack(alignment: .leading){
+                                Image(systemName: "person.3.sequence.fill")
+                                    .foregroundColor(Color("YellowColor"))
+                                Spacer()
+                                    .frame(height: 11)
+                                Text("Travel Companions")
+                                    .foregroundColor(Color("BlackColor"))
+                            }
+                            
+                            
                         }
-                        
-                        
-                    }
+                    })
                     
-                    ZStack(alignment: .leading){
-                        RoundedRectangle(cornerRadius: 20)
-                            .frame(width: 177.5, height: 110)
-                            .foregroundColor(Color("WhiteColor"))
-                            .shadow( color: .black, radius: 5, x:2, y:2)
-                        
-                        VStack(alignment: .leading){
-                            Image(systemName: "wallet.pass.fill")
-                                .foregroundColor(Color("YellowColor"))
-                            Spacer()
-                                .frame(height: 9)
-                            Text("Your wallet")
+                    Button( action:{}, label: {
+                        ZStack(alignment: .leading){
+                            RoundedRectangle(cornerRadius: 20)
+                                .frame(width: 177.5, height: 110)
+                                .foregroundColor(Color("WhiteColor"))
+                                .shadow( color: .black, radius: 5, x:2, y:2)
+                            
+                            VStack(alignment: .leading){
+                                Image(systemName: "wallet.pass.fill")
+                                    .foregroundColor(Color("YellowColor"))
+                                Spacer()
+                                    .frame(height: 9)
+                                Text("Your wallet")
+                                    .foregroundColor(Color("BlackColor"))
+                            }
+                            .frame(width: 120)
                         }
-                        .frame(width: 120)
-                    }
+                    })
                 }
                 
                 Spacer()
                     .frame(height:15)
                 
-                ZStack(alignment: .leading){
-                    RoundedRectangle(cornerRadius: 20)
-                        .frame(width: 355, height: 110)
-                        .foregroundColor(Color("WhiteColor"))
-                        .shadow( color: .black, radius: 5, x:2, y:2)
-                    
-                    VStack(alignment: .leading){
-                        Image(systemName: "person.text.rectangle.fill")
-                            .foregroundColor(Color("YellowColor"))
-                            .font(.title)
-                        Spacer()
-                            .frame(height: 9)
-                        Text("Travel Documents")
-                            .font(.title)
+                Button( action:{}, label: {
+                    ZStack(alignment: .leading){
+                        RoundedRectangle(cornerRadius: 20)
+                            .frame(width: 355, height: 110)
+                            .foregroundColor(Color("WhiteColor"))
+                            .shadow( color: .black, radius: 5, x:2, y:2)
+                        
+                        VStack(alignment: .leading){
+                            Image(systemName: "person.text.rectangle.fill")
+                                .foregroundColor(Color("YellowColor"))
+                                .font(.title)
+                            Spacer()
+                                .frame(height: 9)
+                            Text("Travel Documents")
+                                .font(.title)
+                                .foregroundColor(Color("BlackColor"))
+                        }
+                        .frame(width: 300, alignment: .center)
                     }
-                    .frame(width: 300, alignment: .center)
-                }
+                })
                
                Spacer()
                     .frame(height: 140)
