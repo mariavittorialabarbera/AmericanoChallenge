@@ -90,7 +90,7 @@ struct ContentView: View {
                                         HStack {
                                             Image(systemName: "airplane")
                                                 .foregroundColor(Color("YellowColor"))
-                                            Text("0")
+                                            Text("15")
                                                 .frame(width: 170, alignment: .leading)
                                                 .foregroundColor(Color("BlackColor"))
                                                 .font(.system(size: 30))
@@ -113,7 +113,7 @@ struct ContentView: View {
                                                     .foregroundColor(Color("YellowColor"))
                                                     .font(.system(size: 20))
                                                     .frame(width: 10, alignment: .leading)
-                                                Text("20")
+                                                Text("7")
                                                     .frame(width: 60, alignment: .center)
                                                     .foregroundColor(Color("BlackColor"))
                                                     .font(.system(size: 30))
@@ -128,9 +128,9 @@ struct ContentView: View {
                                                 .font(.system(size: 20))
                                             
                                             HStack{
-                                                Image(systemName: "wallet.pass.fill")
+                                                Image(systemName: "airplane.departure")
                                                     .foregroundColor(Color("YellowColor"))
-                                                Text("30")
+                                                Text("8")
                                                     .frame(width: 60, alignment: .leading)
                                                     .foregroundColor(Color("BlackColor"))
                                                     .font(.system(size: 30))
@@ -220,7 +220,22 @@ struct ContentView: View {
                 })
                
                Spacer()
-                    .frame(height: 140)
+                    .frame(height: 60)
+                
+                Button( action:{}, label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                        //.stroke(Color("YellowColor"), lineWidth: 1.5)
+                            .frame(width: 325, height: 80)
+                            .foregroundColor(Color("YellowColor"))
+                            .shadow( color: .black, radius: 5, x:4, y:4)
+                        
+                        Text("Log out")
+                            .font(.title2)
+                            .foregroundColor(Color("BlackColor"))
+                    }
+                })
+                
             }
             .navigationTitle("Personal Information")
             .fontWeight(.bold)
