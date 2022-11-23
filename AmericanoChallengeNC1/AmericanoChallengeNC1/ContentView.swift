@@ -237,8 +237,9 @@ struct ContentView: View {
                 })
                 
             }
-            .navigationTitle("Personal Information")
+            .navigationTitle("My Ryanair")
             .fontWeight(.bold)
+            .foregroundColor(Color("WhiteColor"))
         }
     }
 }
