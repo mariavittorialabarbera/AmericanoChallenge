@@ -18,13 +18,16 @@ struct ContentView: View {
             
             VStack() {
                 
-                VStack{
+                VStack(spacing:0) {
                     Spacer()
                         .frame(height: 30)
+                    
+                    
                     ZStack(alignment: .top){
+                        
                         RoundedRectangle(cornerRadius: 10)
                             //.stroke(Color("YellowColor"), lineWidth: 1.5)
-                            .frame(width: 355, height: 310)
+                            .frame(width: 355, height: 135)
                             .foregroundColor(Color("WhiteColor"))
                             .shadow( color: .black, radius: 5, x:4, y:4)
                             .clipShape(TicketShape())
@@ -49,75 +52,95 @@ struct ContentView: View {
                                     .font(.system(size: 30))
                                 
                             }
+                            
+                            
                             DashedSeperator()
-                                                  .stroke(Color.gray, style: StrokeStyle(lineWidth: 1,dash: [4,8], dashPhase: 6))
-                                                  .frame(width: 330, height: 0.4)
-                                                  //.padding(.horizontal)
-                            
-                            
-                            
-                            Spacer()
-                                .frame(height: 30)
-                            
-                            VStack{
-                                //Image(systemName: "airplane")
-                                Text("Flights")
-                                //.font(.title)
-                                    .frame(width: 200, alignment: .leading)
-                                    .foregroundColor(Color("BlackColor"))
-                                    .font(.system(size: 20))
+                                .stroke(Color.gray, style: StrokeStyle(lineWidth: 1,dash: [4,8], dashPhase: 6))
+                                .frame(width: 355, height: 14.4, alignment: .bottom)
                                 
-                                HStack {
-                                    Image(systemName: "airplane")
-                                        .foregroundColor(Color("YellowColor"))
-                                    Text("0")
-                                        .frame(width: 170, alignment: .leading)
-                                        .foregroundColor(Color("BlackColor"))
-                                        .font(.system(size: 30))
-                                }
-                            }
+                            //.padding(.horizontal)
                             
-                            Spacer()
-                                .frame(height: 15)
                             
-                            HStack(alignment: .center){
-                                VStack(alignment: .leading){
-                                    Text("Countries")
-                                    //.font(.title)
-                                        .frame(width: 200, alignment: .leading)
-                                        .foregroundColor(Color("BlackColor"))
-                                        .font(.system(size: 20))
-                                    
-                                    HStack{
-                                        Image(systemName: "airplane")
-                                            .foregroundColor(Color("YellowColor"))
-                                            .frame(width: 10, alignment: .leading)
-                                        Text("20")
-                                            .frame(width: 60, alignment: .center)
+                            
+                           Spacer()
+                                .frame(height: 0)
+                            
+                            
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 10)
+                                //.stroke(Color("YellowColor"), lineWidth: 1.5)
+                                    .frame(width: 355, height: 150)
+                                    .foregroundColor(Color("WhiteColor"))
+                                    .shadow( color: .black, radius: 5, x:4, y:4)
+                                    .clipShape(TicketShape2().rotation(Angle(degrees: 180)))
+                                
+                                
+                                VStack (alignment: .leading){
+                                    VStack{
+                                        //Image(systemName: "airplane")
+                                        Text("Flights")
+                                        //.font(.title)
+                                            .frame(width: 200, alignment: .leading)
                                             .foregroundColor(Color("BlackColor"))
-                                            .font(.system(size: 30))
-                                    }
-                                    
-                                }
-                                VStack{
-                                    Text("Airports")
-                                    //.font(.title)
-                                        .frame(width: 100, alignment: .leading)
-                                        .foregroundColor(Color("BlackColor"))
-                                        .font(.system(size: 20))
-                                    
-                                    HStack{
+                                            .font(.system(size: 20))
                                         
-                                        Text("30")
-                                            .frame(width: 100, alignment: .leading)
-                                            .foregroundColor(Color("BlackColor"))
-                                            .font(.system(size: 30))
-                                    }
-                                }
-                            }
-                            //.frame()
+                                        HStack {
+                                            Image(systemName: "airplane")
+                                                .foregroundColor(Color("YellowColor"))
+                                            Text("0")
+                                                .frame(width: 170, alignment: .leading)
+                                                .foregroundColor(Color("BlackColor"))
+                                                .font(.system(size: 30))
+                                        }
+                                    } //vstack
+                                    
+                                    Spacer()
+                                        .frame(height: 15)
+                                    
+                                    HStack(alignment: .center){
+                                        VStack(alignment: .leading){
+                                            Text("Countries")
+                                            //.font(.title)
+                                                .frame(width: 200, alignment: .leading)
+                                                .foregroundColor(Color("BlackColor"))
+                                                .font(.system(size: 20))
+                                            
+                                            HStack{
+                                                Image(systemName: "airplane")
+                                                    .foregroundColor(Color("YellowColor"))
+                                                    .frame(width: 10, alignment: .leading)
+                                                Text("20")
+                                                    .frame(width: 60, alignment: .center)
+                                                    .foregroundColor(Color("BlackColor"))
+                                                    .font(.system(size: 30))
+                                            }
+                                            
+                                        }
+                                        VStack{
+                                            Text("Airports")
+                                            //.font(.title)
+                                                .frame(width: 100, alignment: .leading)
+                                                .foregroundColor(Color("BlackColor"))
+                                                .font(.system(size: 20))
+                                            
+                                            HStack{
+                                                
+                                                Text("30")
+                                                    .frame(width: 100, alignment: .leading)
+                                                    .foregroundColor(Color("BlackColor"))
+                                                    .font(.system(size: 30))
+                                            }
+                                        }
+                                    } //hstack
+                                    //.frame()
+                                    
+                            } //vstackcard2
+                        }  //zstackcard2
                             
-                        }
+                            
+                        } //vstack
+                        
+                        
                         
                     }
                     
