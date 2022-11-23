@@ -27,7 +27,7 @@ struct ContentView: View {
                             .frame(width: 355, height: 310)
                             .foregroundColor(Color("WhiteColor"))
                             .shadow( color: .black, radius: 5, x:4, y:4)
-                            
+                            .clipShape(TicketShape())
                         
                         VStack(alignment: .leading){
                             
@@ -47,7 +47,15 @@ struct ContentView: View {
                                     .frame(width: 200, alignment: .leading)
                                     .foregroundColor(Color("BlackColor"))
                                     .font(.system(size: 30))
+                                
                             }
+                            DashedSeperator()
+                                                  .stroke(Color.gray, style: StrokeStyle(lineWidth: 1,dash: [4,8], dashPhase: 6))
+                                                  .frame(width: 330, height: 0.4)
+                                                  //.padding(.horizontal)
+                            
+                            
+                            
                             Spacer()
                                 .frame(height: 30)
                             
