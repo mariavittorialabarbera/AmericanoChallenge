@@ -48,7 +48,7 @@ struct ContentView: View {
                                 Image(systemName: "person.circle.fill")
                                     .foregroundColor(Color("YellowColor"))
                                     .font(.system(size: 50))
-                                Text("Your Name")
+                                Text("Maria Rossi")
                                 //.font(.title)
                                     .frame(width: 200, alignment: .leading)
                                     .foregroundColor(Color("BlackColor"))
